@@ -10,4 +10,7 @@ cc_library(
         "c.cpp",
     ],
     visibility = ["//visibility:public"],
+    deps = [
+        "//libA:A",
+    ],
 )
