@@ -38,7 +38,7 @@ def _combine_impl(ctx):
         command = "cd {} && ar -x {} {}".format(
                 output.dirname,
                 " && ar -x ".join([dep.basename for dep in target_list]),
-                " && ar -rc libauto.a *.o"
+                " && ar -rc {} *.o".format(output.basename)
             )
         print("command = ", command)
         ctx.actions.run_shell(
