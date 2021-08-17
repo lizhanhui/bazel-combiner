@@ -1,0 +1,13 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "B",
+    hdrs = [
+        "b.h",
+    ],
+    strip_include_prefix = "//libB",
+    srcs = [
+        "b.cpp",
+    ],
+    visibility = ["//visibility:public"],
+)
