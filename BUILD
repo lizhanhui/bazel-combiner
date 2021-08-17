@@ -7,3 +7,11 @@ my_cc_combine(
     output = "libcombined.a",
     deps = ["//libA:A", "//libB:B", "//libC:C"]
 ) 
+
+my_cc_combine(
+    name = "hello_combined_shared",
+    # 这里将所有的静态库合并成一个静态库
+    genstatic = False,
+    output = "libcombined.so",
+    deps = ["//libA:A", "//libB:B", "//libC:C"]
+) 
