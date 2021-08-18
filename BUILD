@@ -13,5 +13,5 @@ cc_combine(
     # 这里将所有的静态库合并成一个静态库
     genstatic = False,
     output = "libcombined.so",
-    deps = ["//libA:A", "//libB:B", "//libC:C"]
+    deps = ["//libB:B", "//libC:C"]
 ) 
